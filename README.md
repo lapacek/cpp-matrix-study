@@ -8,7 +8,7 @@ This is the naive implementation, therefore this code should not be used in prod
 
 ## motivation
 
-Study of a basics of matrix data structure design using a c++11 metaprogramming techniques.
+Study of a basics of matrix data structure design using a c++11 metaprogramming techniques. Just for understand some template tricks.
 
 ## build
 
