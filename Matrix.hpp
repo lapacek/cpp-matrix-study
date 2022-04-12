@@ -95,7 +95,6 @@ public:
         	if (pred)
 		{
 			std::copy_if(m_data->cbegin(), m_data->cend(), std::ostream_iterator<T>(stream, " "), pred);
-
 			return;
         	}
 
