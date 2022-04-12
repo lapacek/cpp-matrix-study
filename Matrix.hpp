@@ -14,6 +14,7 @@ constexpr int Dynamic = -1;
 
 class MatrixBase
 {
+
 protected:
 	unsigned int m_rows;
 	unsigned int m_cols;
@@ -26,10 +27,11 @@ template <
         >
 class Matrix : protected MatrixBase
 {
+
 public:
 	using ColsPolicy = typename std::enable_if<(COLS>0)>::type;
 	using RowsPolicy = typename std::enable_if<(ROWS>0)>::type;
-    using type = T;
+	using type = T;
 
 public:
 	Matrix ()
@@ -42,6 +44,7 @@ public:
 template <typename T>
 class Matrix<T, Dynamic, Dynamic> : protected MatrixBase
 {
+
 public:
 	using type   = T;
 	using data_t = std::vector<Matrix::type>;
@@ -82,27 +85,27 @@ public:
 	        unsigned short int j,
 	        Matrix::type param
 	        )
-    { ; }
+	{ ; }
 
 	inline void dump (
 	        std::ostream & stream,
 	        const std::function<bool(T)> & pred = nullptr
 	        )
 	{
-        if (pred)
+        	if (pred)
 		{
 			std::copy_if(m_data->cbegin(), m_data->cend(), std::ostream_iterator<T>(stream, " "), pred);
-        }
-        else
-		{
-			std::copy(m_data->begin(), m_data->end(), std::ostream_iterator<T>(stream, " "));
-		}
+
+			return;
+        	}
+
+		std::copy(m_data->begin(), m_data->end(), std::ostream_iterator<T>(stream, " "));
 	}
 
 protected:
 	std::unique_ptr<data_t>         m_data;
 
-	int								 m_max;
+	int				 m_max;
 	int                              m_min;
 };
 

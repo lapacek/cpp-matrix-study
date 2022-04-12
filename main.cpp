@@ -8,32 +8,36 @@ using matrix::Dynamic;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
+
+	if (argc != 3)
 	{
 		std::cout << "error: any argument is not passed." << std::endl;
+		
 		return EXIT_FAILURE;
 	}
 
-    std::string inputFileName(argv[1]);
+	std::string inputFileName(argv[1]);
 	std::ifstream source;
 
-    source.open(inputFileName);
+	source.open(inputFileName);
 
 	if (! source.is_open())
 	{
-        std::cout << "error: source file is not opened." << std::endl;
+        	std::cout << "error: source file is not opened." << std::endl;
+		
 		return EXIT_FAILURE;
 	}
 
-    std::string outputFileName(argv[2]);
-    std::ofstream log;
+	std::string outputFileName(argv[2]);
+	std::ofstream log;
 
-    log.open(outputFileName);
+	log.open(outputFileName);
 
-    if (! log.is_open())
-    {
-        std::cout << "error: log file is not opened." << std::endl;
-        return EXIT_FAILURE;
+	if (! log.is_open())
+	{
+		std::cout << "error: log file is not opened." << std::endl;
+
+		return EXIT_FAILURE;
 	}
 
 	std::string m;
