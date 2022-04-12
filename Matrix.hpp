@@ -56,7 +56,7 @@ public:
 	         unsigned int n
 	         )
 	{
-		     m_data.reset(new data_t(m*n, 0));
+		m_data.reset(new data_t(m*n, 0));
 	}
 
 	// TODO: (Refactoring)
