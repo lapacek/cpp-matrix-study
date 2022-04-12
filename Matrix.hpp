@@ -71,6 +71,7 @@ public:
 		// TODO: (Refactoring)
 		// Remove dependecy on integer type within method exclusion
 		std::uniform_int_distribution<> dist{min, max};
+
 		gen.seed(rd());
 
 		std::generate(
@@ -95,6 +96,7 @@ public:
         	if (pred)
 		{
 			std::copy_if(m_data->cbegin(), m_data->cend(), std::ostream_iterator<T>(stream, " "), pred);
+
 			return;
         	}
 
