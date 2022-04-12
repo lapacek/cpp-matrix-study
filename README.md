@@ -1,5 +1,6 @@
 # cpp-matrix-study
-Matrix data structure design &amp; implementation study
+
+The matrix data structure design &amp; implementation study
 
 ## warning
 
@@ -34,6 +35,6 @@ The `<output_file>` represents file where result matrix will be saved.
 ### output
 
 Program will generate the matrix of random numbers with dimensions passed in from `<source_file>` and also will print prime numbers form that matrix.
-The result will be sent to STDOUT and into the `<output_file>`.
+The result will be sent to `STDOUT` and into the `<output_file>`.
 
 Just for fun.
